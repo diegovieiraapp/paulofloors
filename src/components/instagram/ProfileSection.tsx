@@ -6,12 +6,12 @@ interface ProfileSectionProps {
 
 const ProfileSection = ({ onQuoteClick }: ProfileSectionProps) => {
   return (
-    <section className="px-4 py-4">
-      {/* Profile header */}
-      <div className="flex items-start gap-4 mb-4">
+    <section className="px-4 py-3">
+      {/* Profile header - Instagram style with stats */}
+      <div className="flex items-center gap-6 mb-3">
         <div className="story-ring flex-shrink-0">
           <div className="story-ring-inner">
-            <div className="w-20 h-20 rounded-full overflow-hidden bg-foreground">
+            <div className="w-[77px] h-[77px] rounded-full overflow-hidden bg-foreground">
               <img 
                 src={logo} 
                 alt="PauloFloors" 
@@ -21,27 +21,38 @@ const ProfileSection = ({ onQuoteClick }: ProfileSectionProps) => {
           </div>
         </div>
         
-        <div className="flex-1 pt-2">
-          <h1 className="font-semibold text-lg text-foreground">PauloFloors</h1>
-          <p className="text-sm text-muted-foreground">
-            Floor Installation • Refinishing • Sanding
-          </p>
+        {/* Stats */}
+        <div className="flex flex-1 justify-around">
+          <div className="text-center">
+            <p className="text-lg font-semibold text-foreground">847</p>
+            <p className="text-xs text-muted-foreground">posts</p>
+          </div>
+          <div className="text-center">
+            <p className="text-lg font-semibold text-foreground">12.4K</p>
+            <p className="text-xs text-muted-foreground">followers</p>
+          </div>
+          <div className="text-center">
+            <p className="text-lg font-semibold text-foreground">156</p>
+            <p className="text-xs text-muted-foreground">following</p>
+          </div>
         </div>
       </div>
 
-      {/* Bio */}
-      <div className="mb-4">
-        <p className="text-sm text-foreground leading-relaxed">
-          🏠 Transforming homes with premium hardwood floors<br />
-          📍 Serving the greater metro area<br />
+      {/* Name and bio */}
+      <div className="mb-3">
+        <h1 className="text-sm font-semibold text-foreground">PauloFloors Design Center</h1>
+        <p className="text-xs text-muted-foreground mb-1">Floor Installation Service</p>
+        <p className="text-sm text-foreground leading-snug">
+          🏠 Transforming homes with premium hardwood floors{"\n"}
+          📍 Serving the greater metro area{"\n"}
           ✨ 15+ years of craftsmanship excellence
         </p>
       </div>
 
-      {/* CTA Button */}
+      {/* CTA Button - Instagram style */}
       <button 
         onClick={onQuoteClick}
-        className="ig-button-primary"
+        className="w-full bg-secondary hover:bg-secondary/80 text-foreground text-sm font-semibold py-1.5 px-4 rounded-lg transition-colors"
       >
         Get a free preliminary quote
       </button>

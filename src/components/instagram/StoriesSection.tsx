@@ -36,7 +36,7 @@ const StoriesSection = ({ onStoryClick }: StoriesSectionProps) => {
 
   return (
     <section className="border-b border-border">
-      <div className="flex gap-4 px-4 py-3 overflow-x-auto scrollbar-hide">
+      <div className="flex gap-3 px-3 py-2 overflow-x-auto scrollbar-hide">
         {stories.map((story, index) => (
           <button
             key={story.id}
@@ -45,7 +45,7 @@ const StoriesSection = ({ onStoryClick }: StoriesSectionProps) => {
           >
             <div className={viewedStories.has(story.id) ? "p-0.5 rounded-full border-2 border-muted" : "story-ring"}>
               <div className={viewedStories.has(story.id) ? "" : "story-ring-inner"}>
-                <div className="w-16 h-16 rounded-full overflow-hidden">
+                <div className="w-[66px] h-[66px] rounded-full overflow-hidden">
                   <img 
                     src={story.image} 
                     alt={story.title}
@@ -54,7 +54,7 @@ const StoriesSection = ({ onStoryClick }: StoriesSectionProps) => {
                 </div>
               </div>
             </div>
-            <span className="text-xs text-foreground max-w-[64px] truncate">
+            <span className="text-[11px] text-foreground max-w-[66px] truncate">
               {story.title}
             </span>
           </button>
