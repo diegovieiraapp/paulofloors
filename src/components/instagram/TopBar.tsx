@@ -7,9 +7,9 @@ interface TopBarProps {
 
 const TopBar = ({ onMenuClick }: TopBarProps) => {
   return (
-    <header className="sticky top-0 z-50 bg-background border-b border-border">
-      <div className="flex items-center justify-between px-4 h-14">
-        <div className="flex items-center gap-3">
+    <header className="sticky top-0 z-50 bg-background border-b border-border safe-area-top">
+      <div className="flex items-center justify-between px-4 h-11">
+        <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full overflow-hidden bg-foreground">
             <img 
               src={logo} 

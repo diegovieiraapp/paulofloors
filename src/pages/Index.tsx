@@ -27,7 +27,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background max-w-lg mx-auto">
+    <div className="min-h-screen bg-background w-full md:max-w-md md:mx-auto md:border-x md:border-border">
       <TopBar onMenuClick={() => setMenuOpen(true)} />
       
       <main>
